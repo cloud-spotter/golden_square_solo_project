@@ -1,4 +1,4 @@
-# {{CustomerOrder}} Class Design Recipe
+# {{Customer Order}} Class Design Recipe
 
 Copy this into a `recipe.md` in your project and fill it out.
 
@@ -33,7 +33,6 @@ class CustomerOrder:
         pass # No code here yet
 
     def view_menu(self):
-        # Parameters - menu: dictionary
         # Returns: the self menu object
         # Side-effects: None 
         pass # No code here yet
@@ -44,8 +43,7 @@ class CustomerOrder:
         # Side-effects: Saves the item to the self object (order) 
         pass # No code here yet
 
-    def calculate_total(self, order):
-        # Parameters - order: list representing selected items from the menu
+    def calculate_total(self):
         # Returns: A float total of the customer's selected items
         # Side-effects: Throws an exception if no order exists
         pass # No code here yet
@@ -68,8 +66,8 @@ _Make a list of examples of how the class will behave in different situations._
 #__init__ creates a menu with available items
 
 """
-customer_order = CustomerOrder()
-customer_order.view_menu() # -> {Item 1: 4.00, Item 2: 6.50, Item 3: 7.00}
+customer_order = CustomerOrder({"Item 1": "4.99", "Item 2": "6.49", "Item 3": "7.99"})
+customer_order.view_menu() # -> {"Item 1": "4.99", "Item 2": "6.49", "Item 3": "7.99"}
 
 
 """
@@ -77,9 +75,9 @@ customer_order.view_menu() # -> {Item 1: 4.00, Item 2: 6.50, Item 3: 7.00}
 #select_item adds this item to the customer's order
 
 """
-customer_order = CustomerOrder()
+customer_order = CustomerOrder({"Item 1": "4.99", "Item 2": "6.49", "Item 3": "7.99"})
 customer_order.select_item("Item 2")
-customer_order.view_receipt() # -> "Amount due: £6.50. Items ordered: Item 2 - 6.50"
+customer_order.view_receipt() # -> "Amount due: £6.49. Items ordered: {'Item 2': '6.49'}"
 
 
 """
@@ -87,10 +85,10 @@ customer_order.view_receipt() # -> "Amount due: £6.50. Items ordered: Item 2 - 
 #select_item adds the items to the customer's order
 
 """
-customer_order = CustomerOrder()
+customer_order = CustomerOrder({"Item 1": "4.99", "Item 2": "6.49", "Item 3": "7.99"})
 customer_order.select_item("Item 2")
 customer_order.select_item("Item 1")
-customer_order.view_receipt() # -> "Amount due: £10.50. Items ordered: Item 2 - 6.50, Item 1 - 4.00"
+customer_order.view_receipt() # -> "Amount due: £11.48. Items ordered: {'Item 2': '6.49', 'Item 1': '4.99'}"
 
 
 """
@@ -98,8 +96,17 @@ customer_order.view_receipt() # -> "Amount due: £10.50. Items ordered: Item 2 -
 #select_item raises an exception and displays an error message 
 
 """
-customer_order = CustomerOrder()
+customer_order = CustomerOrder({"Item 1": "4.99", "Item 2": "6.49", "Item 3": "7.99"})
 customer_order.select_item("Artichoke omlette") # -> raises an error with message "Item not on menu."
+
+
+"""
+5. When a customer requests a receipt for an empty order
+#view_receipt raises an exception and displays an error message
+
+"""
+customer_order = CustomerOrder({"Item 1": "4.99", "Item 2": "6.49", "Item 3": "7.99"})
+customer_order.view_receipt() # -> raises an error with message "Error: no order placed."
 
 
 """
