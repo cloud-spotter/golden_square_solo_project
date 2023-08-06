@@ -32,7 +32,7 @@ class CustomerOrder:
         # Side effects: Sets the menu property of the self object
         pass # No code here yet
 
-    def view_menu(self, menu):
+    def view_menu(self):
         # Parameters - menu: dictionary
         # Returns: the self menu object
         # Side-effects: None 
@@ -107,7 +107,7 @@ When a customer requests a receipt
 #view_receipt displays the customer's order, with prices, and amount due (total)
 
 """
-## This test is covered by tests 2 & 3 ##
+# This test is covered by tests 2 & 3 #
 
 _Encode each example as a test. You can add to the above list as you go._
 
