@@ -1,38 +1,26 @@
 class CustomerOrder:
     '''A class to represent a customer's order at a food outlet'''
-    # User-facing properties:
-    # menu: dictionary  
 
     def __init__(self, menu: dict) -> None:
-        # Parameters - menu: dictionary containing available items with prices
-        # Side effects: Sets the menu property of the self object
         self._menu = menu
         self._order = {}
 
     def view_menu(self):
-        # Returns: the self menu object
-        # Side-effects: None 
         return self._menu
     
     def select_item(self, item: str) -> None:
-        # Parameters - item: string representing a single menu item
-        # Side-effects: Saves the item to the self object (order) 
         if item in self._menu:
             self._order[item] = self._menu[item]
         else: 
             raise Exception("Item not on menu.")
         
     def calculate_total(self):
-        # Returns: A float total of the customer's selected items
-        # Side-effects: Throws an exception if no order exists
         total = 0.0
         for item, price in self._order.items():
             total += float(price)
         return total
 
     def view_receipt(self):
-        # Returns: A string itemising the customer's order, with prices, and amount due (total)
-        # Side-effects: Throws an exception if no order exists
         if self._order == {}:
             raise Exception("Error: no order placed.")
         else:
