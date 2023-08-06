@@ -1,4 +1,4 @@
-# Customer Order Class Design Recipe
+# {{CustomerOrder}} Class Design Recipe
 
 Copy this into a `recipe.md` in your project and fill it out.
 
@@ -107,11 +107,22 @@ When a customer requests a receipt
 #view_receipt displays the customer's order, with prices, and amount due (total)
 
 """
-# This test is covered by tests 2 & 3 #
-
+#This test is covered by tests 2 & 3 
+```
 
 _Encode each example as a test. You can add to the above list as you go._
 
 ## 4. Implement the Behaviour
 
 _After each test you write, follow the test-driving process of red, green, refactor to implement the behaviour._
+
+
+<!-- BEGIN GENERATED SECTION DO NOT EDIT -->
+
+---
+
+**How was this resource?**  
+[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fgolden-square-in-python&prefill_File=resources%2Fsingle_class_recipe_template.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fgolden-square-in-python&prefill_File=resources%2Fsingle_class_recipe_template.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fgolden-square-in-python&prefill_File=resources%2Fsingle_class_recipe_template.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fgolden-square-in-python&prefill_File=resources%2Fsingle_class_recipe_template.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fgolden-square-in-python&prefill_File=resources%2Fsingle_class_recipe_template.md&prefill_Sentiment=😀)  
+Click an emoji to tell us.
+
+<!-- END GENERATED SECTION DO NOT EDIT -->
